@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "indent": 2,
+    "compiler-version": ["error", "^0.8.0"],
+    "func-visibility": ["warn", {"ignoreConstructors": true}],
+    "no-empty-blocks": "off"
+  },
+  "extends": "solhint:recommended"
+}
