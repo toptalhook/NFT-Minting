@@ -5,7 +5,7 @@
     "outDir": "build",
     "target": "es2018",
     "module": "commonjs",
-    "strict": true,
+    "strict": true
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "artifacts", "cache"],

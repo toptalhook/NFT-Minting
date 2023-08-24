@@ -22,7 +22,7 @@ describe('ERC721', () => {
       expect(await myERC721.name()).to.eq(constants.name);
       expect(await myERC721.symbol()).to.eq(constants.symbol);
       expect(await myERC721.maxSupply()).to.eq(constants.supply);
-      expect(await myERC721.publicSalePrice()).to.eq(ethers.utils.parseEther("0.001"));
+      expect(await myERC721.publicSalePrice()).to.eq(ethers.utils.parseEther('0.001'));
     });
   });
 
@@ -41,13 +41,13 @@ describe('ERC721', () => {
       const amount = maxSupply.add(1);
       const price = await myERC721.publicSalePrice();
       const val = price.mul(amount);
-      await expect(myERC721.clientMint(maxSupply.add(1), {value: val})).to.be.revertedWith("Max Supply Reached");
+      await expect(myERC721.clientMint(maxSupply.add(1), {value: val})).to.be.revertedWith('Max Supply Reached');
     });
 
     it('should revert for insufficient balance', async () => {
       const price = await myERC721.publicSalePrice();
       const val = price.mul(numTokens).sub(1);
-      await expect(myERC721.clientMint(numTokens, {value: val})).to.be.revertedWith("Insufficient money");
+      await expect(myERC721.clientMint(numTokens, {value: val})).to.be.revertedWith('Insufficient money');
     });
   });
 });
