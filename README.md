@@ -11,6 +11,8 @@ Compiled contracts are fed into [TypeChain](https://github.com/dethcrypto/TypeCh
 - `yarn lint` to lint everything.
 - `yarn node:start` to start a Hardhat node on `localhost`.
 - `yarn node:run <path>` to run a script at the given path on `localhost`.
+- `yarn deploy` to deploy contract to Mumbai testnet.
+- `yarn verify` to verify contract which is deployed to Mumbai testnet. Before it, you should update deployed contract address with recent one.
 
 ## Formatting & Linting
 
